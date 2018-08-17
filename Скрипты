@@ -1,0 +1,78 @@
+void REQUEST_SCRIPT(char *scriptName) // 6EB5F71AA68F2E8E E26B2666
+Загружает скрипт в игру. Полный список скриптов игры: pastebin.com/yLNWicUi
+
+void SET_SCRIPT_AS_NO_LONGER_NEEDED(char *scriptName) // C90D2DCACD56184C 6FCB7795
+Выгружает скрипт из игры. Полный список скриптов игры: pastebin.com/yLNWicUi
+
+BOOL HAS_SCRIPT_LOADED(char *scriptName) // E6CC9F3BA0FB9EF1 5D67F751
+Вернет true, если скрипт был успешно загружен в игру.
+
+BOOL DOES_SCRIPT_EXIST(char *scriptName) // FC04745FBE67C19A DEAB87AB
+Вернет true, если скрипт был найден в файлах игры.
+
+void REQUEST_SCRIPT_WITH_NAME_HASH(Hash scriptHash) // D62A67D26D9653E6 1C68D9DC
+Загружает скрипт в игру по его хэшу.
+
+void SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(Hash scriptHash) // C5BC038960E9DB27 96C26F66
+Выгружает скрипт из игры по его хэшу.
+
+BOOL HAS_SCRIPT_WITH_NAME_HASH_LOADED(Hash scriptHash) // 5F0F0C783EB16C04 06674818
+Вернет true, если скрипт по хэшу был успешно загружен в игру.
+
+BOOL _DOES_SCRIPT_WITH_NAME_HASH_EXIST(Hash scriptHash) // F86AA3C56BA31381
+Вернет true, если скрипт был найден в файлах игры.
+
+void TERMINATE_THREAD(int threadId) // C8B189ED9138BCD4 253FD520
+Останавливает скриптовый поток.
+
+BOOL IS_THREAD_ACTIVE(int threadId) // 46E9AE36D8FA6417 78D7A5A0
+Вернет true, если скриптовый поток работает.
+
+char *_GET_NAME_OF_THREAD(int threadId) // 05A42BA9FC8DA96B BE7ACD89
+Получает имя скриптового потока.
+
+void _BEGIN_ENUMERATING_THREADS() // DADFADA5A20143A8 BB4E2F66
+Функция пересчитывает количество запущенных скриптовых потоков. После использования данной функции необходимо вызвать _GET_ID_OF_NEXT_THREAD_IN_ENUMERATION (0x30B4FA1C82DD4B9F).
+
+int _GET_ID_OF_NEXT_THREAD_IN_ENUMERATION() // 30B4FA1C82DD4B9F 1E28B28F
+Возвращает идентификатор следующего по счету скриптового потока. Используется для пересчета всех скриптовых потоков в игре с помощью функции _BEGIN_ENUMERATING_THREADS().
+
+int GET_ID_OF_THIS_THREAD() // C30338E8088E2E21 DE524830
+Получает идентификатор текущего скриптового потока.
+
+void TERMINATE_THIS_THREAD() // 1090044AD1DA76FA 3CD9CBB7
+Функция завершает работу текущего скриптового потока.
+
+int _GET_NUMBER_OF_INSTANCES_OF_SCRIPT_WITH_NAME_HASH(Hash scriptHash) // 2C83A9DA6BFFC4F9 029D3841
+Функция должна возвращать количество экземпляров указанного скрипта, запущенного в данный момент. Но на деле всегда возвращает -1.
+
+char *GET_THIS_SCRIPT_NAME() // 442E0A7EDE4A738A A40FD5D9
+Возвращает имя текущего скрипта.
+
+Hash GET_HASH_OF_THIS_SCRIPT_NAME() // 8A1C8B1738FFE87E 2BEE1F45
+Возвращает хэш текущего запущенного скрипта.
+
+int GET_NUMBER_OF_EVENTS(int eventGroup) // 5F92A689A06620AA A3525D60
+Возвращает идентификатор работы скриптового движка.
+0 = CEventGroupScriptAI, 1 = CEventGroupScriptNetwork
+
+BOOL GET_EVENT_EXISTS(int eventGroup, int eventIndex) // 936E6168A9BCEDB5 A1B447B5
+Вернет true, если выбранный идентификатор запущен в данный момент.
+
+int GET_EVENT_AT_INDEX(int eventGroup, int eventIndex) // D8F66A3A60C62153 B49C1442
+Функция изучена не до конца.
+
+void TRIGGER_SCRIPT_EVENT(int eventGroup, int *args, int argCount, int bit) // 5AE99C571D5BBE5D 54763B35
+Функция изучена не до конца.
+
+void SHUTDOWN_LOADING_SCREEN() // 078EBE9809CCD637 A2826D17
+Отключает загрузочный экран при загрузке скрипта.
+
+void SET_NO_LOADING_SCREEN(BOOL toggle) // 5262CC1995D07E09 C8055034
+Отключает появление загрузочного экрана при загрузке скриптов.
+
+BOOL _GET_NO_LOADING_SCREEN() // 18C1270EA7F199BC
+Вернет true, если загрузочный экран отключен.
+
+void _0xB1577667C3708F9B() // B1577667C3708F9B B03BCCDF
+Неизвестная функция. Возможно, она ничего не делает в игре.
