@@ -1,0 +1,62 @@
+Ped CREATE_PED(int pedType, Hash modelHash, float x, float y, float z, float heading, BOOL isNetwork, BOOL thisScriptCheck) // D49F9B0955C367DE 0389EF71
+Создать персонажа. 
+Типы персонажей:
+PED_TYPE_PLAYER_0 - Майкл
+PED_TYPE_PLAYER_1 - Франклин
+PED_TYPE_NETWORK_PLAYER - ваш персонаж из GTA Online
+PED_TYPE_PLAYER_2 - Тревор
+PED_TYPE_CIVMALE - мужчина
+PED_TYPE_CIVFEMALE - женщина
+PED_TYPE_COP - полицейский
+PED_TYPE_GANG_ALBANIAN - Албанец
+PED_TYPE_GANG_BIKER_1 - байкер
+PED_TYPE_GANG_BIKER_2 - байкер
+PED_TYPE_GANG_ITALIAN - итальянский мафиози
+PED_TYPE_GANG_RUSSIAN - русский мафиози
+PED_TYPE_GANG_RUSSIAN_2 - русский мафиози
+PED_TYPE_GANG_IRISH - иранец
+PED_TYPE_GANG_JAMAICAN - ямаканец 
+PED_TYPE_GANG_AFRICAN_AMERICAN - афроамериканец
+PED_TYPE_GANG_KOREAN - кореец
+PED_TYPE_GANG_CHINESE_JAPANESE - японец
+PED_TYPE_GANG_PUERTO_RICAN - испанец
+PED_TYPE_DEALER - драг-диллер
+PED_TYPE_MEDIC - медик
+PED_TYPE_FIREMAN - пожарный
+PED_TYPE_CRIMINAL - преступник
+PED_TYPE_BUM - ?
+PED_TYPE_PROSTITUTE - проститутка
+PED_TYPE_SPECIAL - персонаж из сюжета
+PED_TYPE_MISSION - персонаж из миссии
+PED_TYPE_SWAT - SWAT
+PED_TYPE_ANIMAL - животное
+PED_TYPE_ARMY - армеец
+
+void DELETE_PED(Ped *ped) // 9614299DCB53E54B 13EFB9A0
+Удаляет созданного персонажа.
+
+Ped CLONE_PED(Ped ped, float heading, BOOL isNetwork, BOOL thisScriptCheck) // EF29A16337FACADB 8C8A8D6E
+Создает персонажа и клонирует его.
+
+
+void CLONE_PED_TO_TARGET(Ped ped, Ped targetPed) // E952D6431689AD9A FC70EEC7
+Тоже самое, что и CLONE_PED, но клонирует уже существущего.
+
+BOOL IS_PED_IN_VEHICLE(Ped ped, Vehicle vehicle, BOOL atGetIn) // A3EE4A07279BB9DB 7DA6BC83
+Вернет true, если персонаж сидит в определенной машине.
+Если пераметр "atGetIn" имеет значение false, функция не будет возвращать true, пока персонаж не сядет в машину и не закроет. Если установить значение true, функция возвращает true в тот момент, когда ped начинает садиться на сиденье (после открытия двери).
+
+BOOL IS_PED_IN_MODEL(Ped ped, Hash modelHash) // 796D90EFB19AA332 A6438D4B
+Вернет true, если персонаж имеет модель, указанная в параметре modelHash.
+
+BOOL IS_PED_IN_ANY_VEHICLE(Ped ped, BOOL atGetIn) // 997ABD671D25CA0B 3B0171EE
+Вернет true, если персонаж сидит в любой машине.
+Если пераметр "atGetIn" имеет значение false, функция не будет возвращать true, пока персонаж не сядет в машину и не закроет. Если установить значение true, функция возвращает true в тот момент, когда ped начинает садиться на сиденье (после открытия двери).
+
+BOOL IS_COP_PED_IN_AREA_3D(float x1, float y1, float z1, float x2, float y2, float z2) // 16EC4839969F9F5E B98DB96B
+Вернет true, если полицейский находится в указанном радиусе.
+
+BOOL IS_PED_INJURED(Ped ped) // 84A2DD9AC37C35C1 2530A087
+Возвращает значение, если ХП персонажа меньше стандартного (по умолчанию - 100).
+
+BOOL IS_PED_HURT(Ped ped) // 5983BB449D7FDB12 69DFA0AF
