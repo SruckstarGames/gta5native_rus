@@ -117,3 +117,582 @@ void RESET_WANTED_LEVEL_DIFFICULTY(Player player) // B9D0DD990DC141DD A64C378D
 
 void START_FIRING_AMNESTY(int duration) // BF9BD71691857E48 5F8A22A6
 ???
+
+void REPORT_CRIME(Player player, int crimeType, int wantedLvlThresh) // E9B09589827545E7 D8EB3A44
+???
+Функция взята из GTA 4. 
+crimeType:
+1: Владение огнестрельным оружием.
+2: Человек бежит на красный свет (код "5-0-5")
+3: Лихач
+4: Превышение скорости (код "5-10")
+5: Нарушения ПДД (код "5-0-5")
+6: Мотоциклист едет без шлема.
+7: Угон авто (код "5-0-3")
+8: Автоугонщик
+9: ???
+10: ???
+11: Нападение на гражданское лицо (код "2-40")
+12: Нападение на полицейского.
+13: Нападение с применением оружия (код "2-45")
+14: Офицер застрелен (код "2-45")
+15: Пешехода сбил автомобиль
+16: Офицер сбит автомобилем
+17: Вертолет падает
+18: Гражданский горит (код "2-40")
+19: Офицер горит (код "10-99")
+20: Автомобиль горит
+21: Air unit down (код "AC"?)
+22: Взрыв (код "9-96")
+23: Убийство холодным оружием (код "2-45")
+24: Офицер убит холодным оружием
+25: Атака на автомобиль (код "MDV"?)
+26: Ущерб имуществу
+27: Подозреваемый угрожает офицеру огнестрельным оружием
+28: Выстрелы
+29: ???
+30: ???
+31: ???
+32: ???
+33: ???
+34: Код "2-45"
+35: ???
+36: Код "9-25"
+37: ???
+38: ???
+39: ???
+40: ???
+41: ???
+42: ???
+43: Возможные нарушения
+44: Гражданский нуждается в помощи
+45: ???
+46: ???
+
+void _SWITCH_CRIME_TYPE(Player player, int p1) // 9A987297ED8BD838 59B5C2A2
+Переключает тип преступления для функции REPORT_CRIME.
+
+void _0xBC9490CA15AEA8FB(Player player) // BC9490CA15AEA8FB 6B34A160
+Неизвестная функция. Возможно, она ничего не делает в игре. 
+В игровых скриптах Rockstar она используется только так: PLAYER::_BC9490CA15AEA8FB(PLAYER::PLAYER_ID());
+
+void _0x4669B3ED80F24B4E(Player player) // 4669B3ED80F24B4E B9FB142F
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0xAD73CE5A09E42D12(Player player) // AD73CE5A09E42D12 85725848
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+ void _0x36F1B38855F2A8DF(Player player) // 36F1B38855F2A8DF 3A7E5FB6
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0xDC64D2C53493ED12(Player player) // DC64D2C53493ED12 D15C4B1C
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0xB45EFF719D8427A6(float p0) // B45EFF719D8427A6 BF6993C7
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0x0032A6DBA562C518() // 0032A6DBA562C518 47CAB814
+Неизвестная функция, найденная в игровых скриптах для GTA Online. Возможно, она ничего не делает в игре.
+
+BOOL CAN_PLAYER_START_MISSION(Player player) // DE7465A27D403C06 39E3CB3F
+Возвращает true, если игрок не на миссии.
+
+BOOL IS_PLAYER_READY_FOR_CUTSCENE(Player player) // 908CBECC2CAA3690 BB77E9CD
+Возвращает true, если кат-сцена в миссии загружена и готова к показу игроку.
+
+BOOL GET_PLAYER_TARGET_ENTITY(Player player, Entity *entity) // 13EDE1A5DBF797C9 F6AAA2D7
+Assigns the handle of locked-on melee target to *entity that you pass it.
+Returns false if no entity found.
+
+BOOL IS_PLAYER_FREE_AIMING(Player player) // 2E397FD2ECD37C87 1DEC67B7
+Возвращает true, если игрок в этот момент целится из оружия.
+
+BOOL GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(Player player, Entity *entity) // 2975C866E6713290 8866D9D0
+Returns TRUE if it found an entity in your crosshair within range of your weapon. Assigns the handle of the target to the *entity that you pass it.
+Returns false if no entity found.
+
+void SET_PLAYER_LOCKON_RANGE_OVERRIDE(Player player, float range) // 29961D490E5814FD 74D42C03
+Функция влияет на дальность действия автоматического прицеливания.
+
+void SET_PLAYER_CAN_DO_DRIVE_BY(Player player, BOOL toggle) // 6E8834B52EC20C77 F4D99685
+Функция устанавливает, может ли игрок показать средний палец, находясь в транспортном средстве.
+
+void SET_PLAYER_CAN_BE_HASSLED_BY_GANGS(Player player, BOOL toggle) // D5E460AD7020A246 71B305BB
+Функция устанавливает, может ли игрок натравить на себя NPC из уличных банд.
+
+void SET_PLAYER_CAN_USE_COVER(Player player, BOOL toggle) // D465A8599DFF6814 13CAFAFA
+Функция устанавливает, может ли игрок прятаться за укрытиями.
+
+int GET_MAX_WANTED_LEVEL() // 462E0DB9B137DC5F 457F1E44
+Функция получает максимальное количество звезд, которые игрок может получить в процессе игры.
+
+BOOL IS_PLAYER_TARGETTING_ANYTHING(Player player) // 78CFE51896B6B8A4 456DB50D
+Функция вернет true, если игрок целится в кого-либо.
+
+void SET_PLAYER_SPRINT(Player player, BOOL toggle) // A01B8075D8B92DF4 7DD7900C
+Функция устанавливает, может ли игрок быстро бегать.
+
+void RESET_PLAYER_STAMINA(Player player) // A6F312FCCE9C1DFE C0445A9C
+???
+
+void RESTORE_PLAYER_STAMINA(Player player, float p1) // A352C1B864CAFD33 62A93608
+???
+
+float GET_PLAYER_SPRINT_STAMINA_REMAINING(Player player) // 3F9F16F8E65A7ED7 47017C90
+Функция возвращает выносливость бега у игрока.
+
+float GET_PLAYER_SPRINT_TIME_REMAINING(Player player) // 1885BC9B108B4C99 40E80543
+Возвращает оставшееся время, при котором игрок сможет быстро бегать.
+
+float GET_PLAYER_UNDERWATER_TIME_REMAINING(Player player) // A1FCF8E6AF40B731 1317125A
+Возвращает оставшееся время, при котором игрок сможет находиться без воздуха под водой.
+
+int GET_PLAYER_GROUP(Player player) // 0D127585F77030AF A5EDCDE8
+Возвращает идентификатор группы, членом которой является игрок. Используется в GTA Online.
+
+int GET_PLAYER_MAX_ARMOUR(Player player) // 92659B4CE1863CB3 02A50657
+Возвращает максимальный показатель брони, который может использовать игрок.
+
+BOOL IS_PLAYER_CONTROL_ON(Player player) // 49C32D60007AFA47 618857F2
+Возвращает true, если игрок может двигаться. Используется преимущественно в кат-сценах.
+
+BOOL _IS_PLAYER_CAM_CONTROL_DISABLED() // 7C814D2FB49F40C0
+Возвращает true, если игрок не может управлять камерой, т. е. при выполнении теста производительности, переключении на другого героя или просмотре катсцены.
+
+BOOL IS_PLAYER_SCRIPT_CONTROL_ON(Player player) // 8A876A65283DD7D7 61B00A84
+Что-то связанное с игровыми скриптами в сюжетной части.
+
+BOOL IS_PLAYER_CLIMBING(Player player) // 95E8F73DC65EFB9C 4A9E9AE0
+Возвращает TRUE, если игрок (ped) поднимается по лестнице в данный момент.
+
+BOOL IS_PLAYER_BEING_ARRESTED(Player player, BOOL atArresting) // 388A47C51ABDAC8E 7F6A60D3
+Возвращает true, пока игрок арестован.
+Если atArresting установлен в 1, эта функция вернет 1, когда игрок арестован (в то время как игрок поднимает руки вверх). Если atArresting имеет значение 0, эта функция возвращает 1 только тогда, когда на экране появляется надпись "арестован".
+
+void RESET_PLAYER_ARREST_STATE(Player player) // 2D03E13C460760D6 453C7CAB
+Снимает статус ареста игрока для функции IS_PLAYER_BEING_ARRESTED.
+
+Vehicle GET_PLAYERS_LAST_VEHICLE() // B6997A7EB3F5C8C0 E2757AC1
+Альтернатива функции GET_VEHICLE_PED_IS_IN
+
+Player GET_PLAYER_INDEX() // A5EDC40EF369B48D 309BBDC1
+Возвращает то же значение, что и PLAYER_ID и NETWORK_PLAYER_ID_TO_INT.
+
+Player INT_TO_PLAYERINDEX(int value) // 41BD2A6B006AF756 98DD98F1
+Просто возвращает значение, которое было передано в данной функции.
+
+int GET_TIME_SINCE_PLAYER_HIT_VEHICLE(Player player) // 5D35ECF3A81A0EE0 6E9B8B9E
+Возвращает время, за которое игрок ударяет автомобиль.
+
+int GET_TIME_SINCE_PLAYER_HIT_PED(Player player) // E36A25322DC35F42 B6209195
+Возвращает время, за которое игрок ударяет педа.
+
+int GET_TIME_SINCE_PLAYER_DROVE_ON_PAVEMENT(Player player) // D559D2BE9E37853B 8836E732
+Получает время, в течение которого игрок ехал по тротуару.
+
+int GET_TIME_SINCE_PLAYER_DROVE_AGAINST_TRAFFIC(Player player) // DB89591E290D9182 9F27D00E
+Получает время, в течение которого игрок ехал по встречной полосе
+
+Player IS_PLAYER_FREE_FOR_AMBIENT_TASK(Vehicle player) // DCCFD3F106C36AB4 85C7E232
+Возвращает true, если игрок не находится за рулем автомобиля(?)
+
+Player PLAYER_ID() // 4F8644AF03D0E0D6 8AEA886C
+Возвращает ID вашего игрока в GTA Online. В одиночном режиме всегда возвращает 0.
+
+Ped PLAYER_PED_ID() // D80958FC74E988A6 FA92E226
+Возвращает ID текущего персонажа в одиночном режиме.
+
+int NETWORK_PLAYER_ID_TO_INT() // EE68096F9F37341E 8DD5B838
+Делает тоже самое, что и PLAYER_ID()
+
+HAS_FORCE_CLEANUP_OCCURRED(int cleanupFlags) // C968670BFACE42D9 4B37333C
+Предназначение данной функции не до конца изучено.
+
+void FORCE_CLEANUP(int cleanupFlags) // BC8983F38F78ED51 FDAAEA2B
+Предназначение данной функции не до конца изучено.
+
+void FORCE_CLEANUP_FOR_ALL_THREADS_WITH_THIS_NAME(char *name, int cleanupFlags) // 4C68DDDDF0097317 04256C73
+Предназначение данной функции не до конца изучено.
+
+void FORCE_CLEANUP_FOR_THREAD_WITH_THIS_ID(int id, int cleanupFlags) // F745B37630DF176B 882D3EB3
+Предназначение данной функции не до конца изучено.
+
+int GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP() // 9A41CF4674A12272 39AA9FC8
+Предназначение данной функции не до конца изучено.
+
+void SET_PLAYER_MAY_ONLY_ENTER_THIS_VEHICLE(Player player, Vehicle vehicle) // 8026FF78F208978A A454DD29
+Функция позволяет игроку садиться только одним транспортным средством, хэш которой необходимо сначала записать в параметре vehicle.
+
+void SET_PLAYER_MAY_NOT_ENTER_ANY_VEHICLE(Player *player) // 1DE37BBF9E9CC14A AF7AFCC4
+Функция запрещает игроку садиться во все автомобили.
+
+int GIVE_ACHIEVEMENT_TO_PLAYER(int achievement) // BEC7076D64130195 822BC992
+Выдает игроку достижение. Все ачивки начинаются от ID 0.
+
+BOOL _SET_ACHIEVEMENT_PROGRESSION(int achId, int progression) // C2AFFFDABBDC2C5C
+Функция работает только в Steam версии игры. Возвращает false, если достижение не имеет прогрессии и выдается игроку сразу.
+
+int _GET_ACHIEVEMENT_PROGRESSION(int achId) // 1C186837D0619335
+Функция работает только в Steam версии игры. Возвращает процент прогресса в получении достижения. Вернет 0, если данная ачивка не имеет прогрессии.
+
+BOOL HAS_ACHIEVEMENT_BEEN_PASSED(int achievement) // 867365E111A3B6EB 136A5BE9
+Возвращает true, если определененное достижение было получено.
+
+BOOL IS_PLAYER_ONLINE() // F25D331DC2627BBC 9FAB6729
+Вернет True, если игрок находится в GTA Online.
+
+BOOL IS_PLAYER_LOGGING_IN_NP() // 74556E1420867ECA 8F72FAD0
+Функция всегда возвращает 0.
+
+void DISPLAY_SYSTEM_SIGNIN_UI(BOOL unk) // 94DD7888C10A979E 4264CED2
+Предназначение данной функции не до конца изучено. Что-то связанное с GTA Online.
+
+BOOL IS_SYSTEM_UI_BEING_DISPLAYED() // 5D511E3867C87139 E495B6DA
+Предназначение данной функции не до конца изучено. Что-то связанное с GTA Online.
+
+void SET_PLAYER_INVINCIBLE(Player player, BOOL toggle) // 239528EACDC3E7DE DFB9A2A2
+Режим God-mode. Игрока невозможно убить, здоровье не уменьшается.
+
+BOOL GET_PLAYER_INVINCIBLE(Player player) // B721981B2B939E07 680C90EE
+Возвращает true, если включен режим God-mode.
+
+void _0xCAC57395B151135F(Player player, BOOL p1) // CAC57395B151135F 00563E0D
+Неизвестная функция. Возможно, она ничего не делает в игре. Найдена в скриптах для GTA Online и в режиме режиссера.
+
+void REMOVE_PLAYER_HELMET(Player player, BOOL p2) // F3AC26D3CC576528 6255F3B4
+Убирает с игрока шлем, который появляется, когда игрок сидит на мотоцикле.
+
+void GIVE_PLAYER_RAGDOLL_CONTROL(Player player, BOOL toggle) // 3C49C870E66F0A28 C7B4D7AC
+Позволяет управлять физикой RAGDOLL в игре, если установить значение true.
+
+void SET_PLAYER_LOCKON(Player player, BOOL toggle) // 5C8B2F450EE4328E 0B270E0F
+Использование этой функции изучено не до конца. 
+
+void SET_PLAYER_TARGETING_MODE(int targetMode) // B1906895227793F3 61CAE253
+Устанавливает тип прицеливания для игрока.
+0 = Стандарт
+1 = Авто-прицел
+2 = Свободное прицеливание
+
+void _0x5702B917B99DB1CD(int p0) // 5702B917B99DB1CD
+Использование этой функции изучено не до конца. 
+
+BOOL _0xB9CF1F793A9F1BF1() // B9CF1F793A9F1BF1
+Использование этой функции изучено не до конца. 
+
+void CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_PED(Player player) // F0B67A4DE6AB5F98 1D31CBBD
+Функция стирает из памяти игры последний дамаг, нанесенный игроку каким-либо NPC (человеком или животным).
+
+BOOL HAS_PLAYER_DAMAGED_AT_LEAST_ONE_PED(Player player) // 20CE80B0C2BF4ACC 14F52453
+Возвращает true, если функция CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_PED успешно сработала.
+
+void CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED(Player player) // 4AACB96203D11A31 7E3BFBC5
+Функция стирает из памяти игры последний дамаг, нанесенный игроку NPC (только человеком).
+
+BOOL HAS_PLAYER_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED(Player player) // E4B90F367BD81752 A3707DFC
+Возвращает true, если функция CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_NON_ANIMAL_PED успешно сработала.
+
+void SET_AIR_DRAG_MULTIPLIER_FOR_PLAYERS_VEHICLE(Player player, float multiplier) // CA7DC8329F0A1E9E F20F72E5
+Использование этой функции изучено не до конца. Возможны значения от 1.0f до 50.0f.
+
+void SET_SWIM_MULTIPLIER_FOR_PLAYER(Player player, float multiplier) // A91C6F0FF7D16A13 B986FF47
+Функция изменяет скорость плавания игрока. Максимальное допустимое значение - 1,49.
+
+void SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER(Player player, float multiplier) // 6DB47AA77FD94E09 825423C2
+Функция увеличивает скорость бега игрока. Максимальное допустимое значение - 1,49. Уменьшить скорость данной функцией невозможно, оно будет проигнорировано игрой.
+
+int GET_TIME_SINCE_LAST_ARREST() // 5063F92F07C2A316 62824EF4
+Возвращает время с момента ареста игрока в миллисекундах. Если игрок не был арестован, возвращается -1.
+
+int GET_TIME_SINCE_LAST_DEATH() // C7034807558DDFCA 24BC5AC0
+Возвращает время с момента смерти игрока в миллисекундах. Если игрок не погибал, возвращается -1.
+
+void ASSISTED_MOVEMENT_CLOSE_ROUTE() // AEBF081FFC0A0E5E F23277F3
+Использование этой функции изучено не до конца. 
+
+void ASSISTED_MOVEMENT_FLUSH_ROUTE() // 8621390F0CDCFE1F D04568B9
+Использование этой функции изучено не до конца.
+
+void SET_PLAYER_FORCED_AIM(Player player, BOOL toggle) // 0FEE4F80AC44A726 94E42E2E
+Функция включает режим прицеливания для игрока.
+
+void SET_PLAYER_FORCED_ZOOM(Player player, BOOL toggle) // 75E7D505F2B15902 B0C576CB
+Аналог SET_PLAYER_FORCED_AIM, только прицел с зумом.
+
+void SET_PLAYER_FORCE_SKIP_AIM_INTRO(Player player, BOOL toggle) // 7651BC64AE59E128 374F42F0
+Использование этой функции изучено не до конца.
+
+void DISABLE_PLAYER_FIRING(Player player, BOOL toggle) // 5E6CC07646BBEAB8 30CB28CB
+Запрещает игроку использовать любой метод боя, включая рукопашный бой и огнестрельное оружие.
+Примечание: необходимо использовать функцию в цикле.
+
+void _0xB885852C39CC265D() // B885852C39CC265D
+Использование этой функции изучено не до конца. Отключает что-то. Используется только один раз в скриптах R* (freemode.ysc).
+
+void SET_DISABLE_AMBIENT_MELEE_MOVE(Player player, BOOL toggle) // 2E8AABFA40A84F8C CCD937E7
+Использование этой функции изучено не до конца.
+
+void SET_PLAYER_MAX_ARMOUR(Player player, int value) // 77DFCCF5948B8C71 C6C3C53B
+Устанавливает максимальное значение для брони. По умолчанию 100. Используйте идентификатор игрока, а не ped id. Например: PLAYER::SET_PLAYER_MAX_ARMOUR(PLAYER::PLAYER_ID(), 100);
+
+void SPECIAL_ABILITY_DEACTIVATE(Player player) // D6A953C6D1492057 80C2AB09
+Функция отключает возможность использовать спец. способности главных героев.
+
+void SPECIAL_ABILITY_DEACTIVATE_FAST(Player player) // 9CB5CE07A3968D5A 0751908A
+Аналогично SPECIAL_ABILITY_DEACTIVATE, но делает это незамедлительно.
+
+void SPECIAL_ABILITY_RESET(Player player) // 375F0E738F861A94 A7D8BCD3
+Сбрасывает значение спец. способности у персонажа.
+
+void _0xC9A763D8FE87436A(Cam player) // C9A763D8FE87436A 4136829A 
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void SPECIAL_ABILITY_CHARGE_SMALL(Player player, BOOL p1, BOOL p2) // 0x2E7B9B683481687D 0x6F463F56
+Восполнить полоску со спец. способностями частично. Значения p1 и p2 всегда должны быть равны true, иначе функция работать не будет.
+
+void SPECIAL_ABILITY_CHARGE_MEDIUM(Player player, Vehicle p1, Vehicle p2) // F113E3AA9BC54613 AB55D8F3
+Восполнить полоску со спец. способностями наполовину. Значения p1 и p2 всегда должны быть равны true, иначе функция работать не будет.
+
+void SPECIAL_ABILITY_CHARGE_LARGE(Player player, BOOL p1, BOOL p2) // F733F45FA4497D93 F440C04D
+Восполнить полоску со спец. способностями полностью. Значения p1 и p2 всегда должны быть равны true, иначе функция работать не будет.
+
+void SPECIAL_ABILITY_CHARGE_CONTINUOUS(Player player, Ped p2) // ED481732DFF7E997 5FEE98A2
+Функция позволяет использовать спец. способность неограниченное количество времени. Значение p2 всегда должно быть 1.
+
+void SPECIAL_ABILITY_CHARGE_ABSOLUTE(Player player, int p1, BOOL p2) // B7B0870EB531D08D 72429998
+Интенсивность спец. способности. Значения p1 5, 10, 15, 25, или 30. p2 всегда должно быть равно true.
+
+void SPECIAL_ABILITY_CHARGE_NORMALIZED(Player player, float normalizedValue, BOOL p2) // A0696A65F009EE18 8C7E68C1
+Тоже, что и SPECIAL_ABILITY_CHARGE_ABSOLUTE. Значения от 0.0 до 1.0. p2 всегда должно быть true.
+
+void SPECIAL_ABILITY_FILL_METER(Player player, BOOL p1) // 3DACA8DDC6FD4980 B71589DA
+Тоже, что и RECHARGE_SPECIAL_ABILITY.
+
+void SPECIAL_ABILITY_DEPLETE_METER(Player player, BOOL p1) // 1D506DBBBC51E64B 9F80F6DF
+Использование этой функции изучено не до конца. p1 всегда true.
+
+void SPECIAL_ABILITY_LOCK(Hash playerModel) // 6A09D0D590A47D13 1B7BB388
+Включает спец. способность игроку с невозможностью отключения.
+
+void SPECIAL_ABILITY_UNLOCK(Hash playerModel) // F145F3BE2EFA9A3B 1FDB2919
+Отключает спец. способность игроку.
+
+BOOL IS_SPECIAL_ABILITY_UNLOCKED(Hash playerModel) // C6017F6A6CDFA694 C9C75E82\
+Возвращает true, если сработала функция SPECIAL_ABILITY_UNLOCK
+
+Vehicle IS_SPECIAL_ABILITY_ACTIVE(Ped player) // 3E5F7FC85D854E15 1B17E334
+Проверяет, была ли запущена спец. способность и возвращает хэш автомобиля, если игрок сидит в ней.
+
+BOOL IS_SPECIAL_ABILITY_METER_FULL(Player player) // 05A1FE504B7F2587 2E19D7F6
+Возвращает true, если полоска спец. способности заполнена полностью
+
+void ENABLE_SPECIAL_ABILITY(Player player, BOOL toggle) // 181EC197DAEFE121 C86C1B4E
+Включает спец. способность.
+
+BOOL IS_SPECIAL_ABILITY_ENABLED(Player player) // B1D200FE26AEF3CB C01238CC
+Возвращает true, если игрок использует спец. способность
+
+void SET_SPECIAL_ABILITY_MULTIPLIER(float multiplier) // A49C426ED0CA4AB7 FF1BC556 
+Использование этой функции изучено не до конца.
+
+void _0xFFEE8FA29AB9A18E(Player player) // FFEE8FA29AB9A18E 5D0FE25B
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+BOOL _0x5FC472C501CCADB3(Player player) // 5FC472C501CCADB3 46E7E31D
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+BOOL _0xF10B44FD479D69F3(Player player, int p1) // F10B44FD479D69F3 1E359CC8
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+BOOL _0xDD2620B7B9D16FF1(Player player, float p1) // DD2620B7B9D16FF1 8CB53C9F
+Неизвестная функция. Возможно, она ничего не делает в игре. Была найдена в коде ограблений.
+
+void START_PLAYER_TELEPORT(Player player, float x, float y, float z, float heading, BOOL p5, BOOL p6, BOOL p7) // AD15F075A4DA0FDE C552E06C
+Телепортирует игрока на указанную точку. Часть параметров ещё не изучена до конца.
+
+BOOL _HAS_PLAYER_TELEPORT_FINISHED(Player player) // E23D5873C2394C61
+Возвращает true, если игрок был успешно телепортирован функцией START_PLAYER_TELEPORT
+
+void STOP_PLAYER_TELEPORT() // C449EDED9D73009C 86AB8DBB
+Отключает возможность телепортации.
+
+BOOL IS_PLAYER_TELEPORT_ACTIVE() // 02B15662D7F8886F 3A11D118
+Возвращает true, если игрок может телепортироваться.
+
+float GET_PLAYER_CURRENT_STEALTH_NOISE(Player player) // 2F395D61F3A1F877 C3B02362
+Возвращает уровень шума, который издает игрок в данный момент.
+
+void SET_PLAYER_HEALTH_RECHARGE_MULTIPLIER(Player player, float regenRate) // 5DB660B38DD98A31 45514731
+Устанавливает уровень шума, который издает игрок.
+
+void SET_PLAYER_WEAPON_DAMAGE_MODIFIER(Player player, float damageAmount) // CE07B9F7817AADA3 B02C2F39
+Устанавливает урон от огнестрельного оружия для игрока.
+
+void SET_PLAYER_WEAPON_DEFENSE_MODIFIER(Player player, ScrHandle modifier) // 2D83BC011CA14A3C AE446344
+Устанавливает урон, который игрок получает от огнестрельного оружия.
+
+void SET_PLAYER_MELEE_WEAPON_DAMAGE_MODIFIER(Player player, float modifier) // 4A3DC7ECCC321032 362E69AD
+Устанавливает урон от холодного оружия для игрока.
+
+void SET_PLAYER_MELEE_WEAPON_DEFENSE_MODIFIER(Player player, float modifier) // AE540335B4ABC4E2 9F3D577F
+Устанавливает урон, который игрок получает от холодного оружия.
+
+void SET_PLAYER_VEHICLE_DAMAGE_MODIFIER(Player player, float damageAmount) // A50E117CDDF82F0C 823ECA63
+Устанавливает урон от автомобиля для игрока.
+
+void SET_PLAYER_VEHICLE_DEFENSE_MODIFIER(Player player, float modifier) // 4C60E6EFDAFF2462 A16626C7
+Устанавливает урон, который игрок получает, если его давят на автомобиле.
+
+void SET_PLAYER_PARACHUTE_TINT_INDEX(Player player, int tintIndex) // A3D0E54541D9A5E5 8EA12EDB
+Выдает игроку парашют.
+Забрать парашют = -1,
+Rainbow = 0,
+Red = 1,
+SeasideStripes = 2,
+WidowMaker = 3,
+Patriot = 4,
+Blue = 5,
+Black = 6,
+Hornet = 7,
+AirFocce = 8,
+Desert = 9,
+Shadow = 10,
+HighAltitude = 11,
+Airbone = 12,
+Sunrise = 13,
+
+void GET_PLAYER_PARACHUTE_TINT_INDEX(Player player, int *tintIndex) // 75D3F7A1B0D9B145 432B0509
+Получает ID парашюта, который сейчас у игрока (если парашюта нет, возвращает -1. См. ID парашютов в SET_PLAYER_PARACHUTE_TINT_INDEX).
+
+void SET_PLAYER_RESERVE_PARACHUTE_TINT_INDEX(Player player, int index) // AF04C87F5DC1DF38 70689638
+Выдает игроку запасной парашют. См. ID парашютов в SET_PLAYER_PARACHUTE_TINT_INDEX.
+
+void GET_PLAYER_RESERVE_PARACHUTE_TINT_INDEX(Player player, int *index) // D5A016BC3C09CF40 77B8EF01
+Получает ID запасного парашюта (если парашюта нет, возвращает -1. См. ID парашютов в SET_PLAYER_PARACHUTE_TINT_INDEX).
+
+void SET_PLAYER_PARACHUTE_PACK_TINT_INDEX(Player player, int tintIndex) // 93B0FB27C9A04060 D79D5D1B
+Устанавливает расцветку для рюкзака парашюта.
+
+void GET_PLAYER_PARACHUTE_PACK_TINT_INDEX(Player player, int *tintIndex) // 6E9C742F340CE5A2 4E418E13
+Получает ID расцветки рюкзака парашюта.
+
+void SET_PLAYER_HAS_RESERVE_PARACHUTE(Player player) // 7DDAB28D31FAC363 A3E4798E
+Функция включает возможность использовать запасной парашют.
+
+BOOL GET_PLAYER_HAS_RESERVE_PARACHUTE(Player player) // 5DDFE2FF727F3CA3 30DA1DA1
+Возвращает true, если функция SET_PLAYER_HAS_RESERVE_PARACHUTE сработала успешно.
+
+void SET_PLAYER_CAN_LEAVE_PARACHUTE_SMOKE_TRAIL(Player player, BOOL enabled) // F401B182DBA8AF53 832DEB7A
+Позволяет спрыгнуть с парашюта, если из того идет цветной дым.
+
+void GET_PLAYER_PARACHUTE_SMOKE_TRAIL_COLOR(Player player, int *r, int *g, int *b) // EF56DBABD3CD4887 F66E5CDD
+Устанавливает цветной дым для парашюта.
+
+void SET_PLAYER_RESET_FLAG_PREFER_REAR_SEATS(Player player, int flags) // 11D5F725F0E780E0 725C6174
+Использование этой функции изучено не до конца.
+
+void SET_PLAYER_NOISE_MULTIPLIER(Player player, float multiplier) // DB89EF50FF25FCE9 15786DD1
+Устанавливает множитель шума, издаваемого от игрока.
+
+void SET_PLAYER_SNEAKING_NOISE_MULTIPLIER(Player player, float multiplier) // B2C1A29588A9F47C 8D2D89C4
+Устанавливает множитель шума, издаваемого от игрока, когда он крадётся.
+
+BOOL CAN_PED_HEAR_PLAYER(Player player, Ped ped) // F297383AA91DCA29 1C70B2EB
+Возвращает true, если NPC услышал шум от игрока.
+
+void SIMULATE_PLAYER_INPUT_GAIT(Player control, float amount, int gaitType, float speed, BOOL p4, BOOL p5) // 477D5D63E63ECA5D 0D77CC34
+Функция заставляет двигаться игрока, эмулируя нажатия клавиш на клавиатуре. gaitType указывается в миллисекундах: 100, 2000, 500, 300, 200, и т.п. 
+Пример на языке C#: Function.Call(Hash.SIMULATE_PLAYER_INPUT_GAIT, Game.Player, 1.0f, 100, 1.0f, 1, 0); //игрок будет идти вперед в течение 100 миллисекунд.
+
+void RESET_PLAYER_INPUT_GAIT(Player player) // 19531C47A2ABD691 4A701EE1
+Отключает функцию SIMULATE_PLAYER_INPUT_GAIT.
+
+void SET_AUTO_GIVE_PARACHUTE_WHEN_ENTER_PLANE(Player player, BOOL toggle) // 9F343285A00B4BB6 A97C2059
+Если установить значение true, игрок будет всегда получать парашют при посадке в самолет.
+
+void _0xD2B315B6689D537D(Player player, BOOL p1) // D2B315B6689D537D A25D767E
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void SET_PLAYER_STEALTH_PERCEPTION_MODIFIER(Player player, float value) // 4E9021C1FCDD507A 3D26105F
+Использование этой функции изучено не до конца.
+
+BOOL _0x690A61A6D13583F6(Ped p0) // 690A61A6D13583F6 1D371529
+Использование этой функции изучено не до конца. Используется в противоборствах в GTA Online. Члены одной команды не могут вынимать друг друга из автомобилей?
+
+void _0x9EDD76E87D5D51BA(Player player) // 9EDD76E87D5D51BA E30A64DC
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void SET_PLAYER_SIMULATE_AIMING(Player player, BOOL toggle) // C54C95DA968EC5B5 F1E0CAFC
+Эмулирует прицеливание игроком.
+
+void SET_PLAYER_CLOTH_PIN_FRAMES(Player player, BOOL toggle) // 749FADDF97DFE930 F7A0F00F
+Использование этой функции изучено не до конца.
+
+void SET_PLAYER_CLOTH_PACKAGE_INDEX(int index) // 9F7BBA2EA6372500 B8209F16
+Использование этой функции изучено не до конца.
+
+void SET_PLAYER_CLOTH_LOCK_COUNTER(int value) // 14D913B777DFF5DA 8D9FD4D1
+Использование этой функции изучено не до конца.
+
+void PLAYER_ATTACH_VIRTUAL_BOUND(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7) // ED51733DC73AED51 ECD12E60
+Использование этой функции изучено не до конца.
+
+void PLAYER_DETACH_VIRTUAL_BOUND() // 1DD5897E2FA6E7C9 96100EA4
+Использование этой функции изучено не до конца.
+
+BOOL HAS_PLAYER_BEEN_SPOTTED_IN_STOLEN_VEHICLE(Player player) // D705740BB0A1CF4C 4A01B76A
+Возвращает true, если игрок был замечен за угоном автомобиля.
+
+BOOL _0x38D28DA81E4E9BF9(Player player) // 38D28DA81E4E9BF9 013B4F72
+Использование этой функции изучено не до конца.
+
+BOOL _0xBC0753C9CA14B506(Player player, int p1, BOOL p2) // BC0753C9CA14B506 9DF75B2A
+Использование этой функции изучено не до конца. Используется в скрипте fm_mission_controller.
+
+void _EXPAND_WORLD_LIMITS(float x, float y, float z) // 5006D96C995A5827
+Расширяет границы мира. Если игрок находится за пределами мира, он умирает. Эта функция может помочь предотвратить смерть игрока, если тот находится за пределами игрового мира. Используется в скрипте michael1.ysc.
+
+BOOL IS_PLAYER_RIDING_TRAIN(Player player) // 4EC12697209F2196 9765E71D
+Вернет true, если игрок за рулем поезда.
+
+BOOL HAS_PLAYER_LEFT_THE_WORLD(Player player) // D55DDFB47991A294 FEA40B6C
+Возвращает true, если игрок за пределами игрового мира.
+
+void _0xFF300C7649724A0B(Player player, BOOL p1) // FF300C7649724A0B AD8383FA
+Неизвестная функция. Возможно, она ничего не делает в игре. 
+
+void SET_PLAYER_PARACHUTE_VARIATION_OVERRIDE(Player player, int p1, Any p2, Any p3, BOOL p4) // D9284A8C0D48352C 9254249D
+Рандомно выбирает расцветку для парашюта из раннее загруженных в игру.
+
+void CLEAR_PLAYER_PARACHUTE_VARIATION_OVERRIDE(Player player) // 0F4CC924CF8C7B21 FD60F5AB
+Отключает функцию SET_PLAYER_PARACHUTE_VARIATION_OVERRIDE
+
+void SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player, Hash model) // 977DB4641F6FC3DB 5D382498
+Загружает модель с раскраской парашюта в игру.
+
+void CLEAR_PLAYER_PARACHUTE_MODEL_OVERRIDE(Player player) // 8753997EB5F6EE3F 6FF034BB
+Удаляет раннее загруженные модели раскрасок парашютов из памяти игры.
+
+void SET_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE(Player player, Hash model) // DC80A4C2F18A2B64 A877FF5E
+Рандомно выбирает расцветку для рюкзака парашюта из раннее загруженных в игру.
+
+void CLEAR_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE(Player player) // 10C54E4389C12B42 BB62AAC5
+Отключает функцию SET_PLAYER_PARACHUTE_PACK_MODEL_OVERRIDE
+
+void DISABLE_PLAYER_VEHICLE_REWARDS(Player player) // C142BE3BB9CE125F 8C6E611D
+Отключает функцию безумных трюков на автомобилях.
+
+void _0x2F7CEB6520288061(BOOL p0) // 2F7CEB6520288061 2849D4B2
+Использование этой функции изучено не до конца.
+
+void _0x5DC40A8869C22141(BOOL p0, ScrHandle p1) // 5DC40A8869C22141
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+BOOL _0x65FAEE425DE637B0(Player p0) // 65FAEE425DE637B0
+Использование этой функции изучено не до конца.
+
+void _0x5501B7A5CDB79D37(Player p0) // 5501B7A5CDB79D37
+Использование этой функции изучено не до конца. В игровых скриптах практически всегда вызывается после DISABLE_FIRST_PERSON_CAMERA_THIS_FRAME и DISABLE_CONTROL_ACTION.
+
+Player _0x56105E599CAB0EFA(int *p0) // 56105E599CAB0EFA
+Использование этой функции изучено не до конца. Что-то связанное с сетью.
