@@ -1,0 +1,119 @@
+Ped GET_PLAYER_PED(Player playerID) // 43A66C31C68491C0 6E31E993
+Возвращает хэш игрока. Необходимо для использования большинства функций, связанных с игроком.
+
+Ped GET_PLAYER_PED_SCRIPT_INDEX(Player Player) // 50FAC3A3E030A6E1 6AC64990
+Тоже самое, что и GET_PLAYER_PED
+
+void SET_PLAYER_MODEL(Player player, Hash model) // 00A1CADD00108836 774A4C54
+Меняет скин игроку на определенную модель. Для использования модель необходимо сначала загрузить.
+
+void CHANGE_PLAYER_PED(Player Player, Ped ped, BOOL b2, BOOL b3) // 048189FAC643DEEE BE515485
+Работа данной функции не до конца изучена
+
+void GET_PLAYER_RGB_COLOUR(Player Player, int *r, int *g, int *b) // E902EF951DCE178F 6EF43BBB
+Получает RGB цвета игрока. Используется в GTA Online.
+
+int GET_NUMBER_OF_PLAYERS() // 407C7F91DDB46C16 4C1B8867
+Получает количество игроков в сессии GTA Online, в одиночном режиме всегда получает 1.
+
+int GET_PLAYER_TEAM(Player player) // 37039302F4E0A008 9873E404
+Получает ID команды, в которой находится игрок. Используется в противоборствах в GTA Online, в одиночном режиме ничего не делает.
+
+void SET_PLAYER_TEAM(Player player, int team) // 0299FA38396A4940 725ADCF2
+Устанавливает игрока в определенную команду. Используется в противоборствах в GTA Online, в одиночном режиме ничего не делает.
+
+char *GET_PLAYER_NAME(Player player) // 6D0DE6A7B5DA71F8 406B4B20
+Получает ник игрока в игре. Используется в GTA Online.
+
+Any GET_WANTED_LEVEL_RADIUS(Player player) // 085DEB493BE80812 1CF7D7DA
+Остаток от GTA 4. В GTA 5 ничего не делает.
+
+Vector3 GET_PLAYER_WANTED_CENTRE_POSITION(Player player) // 0C92BA89F1AF26F8 821F2D2C
+Остаток от GTA 4. В GTA 5 ничего не делает.
+
+void SET_PLAYER_WANTED_CENTRE_POSITION(Player player, float x, float y, float z) // 520E541A97A13354 F261633A
+Остаток от GTA 4. В GTA 5 ничего не делает.
+
+int GET_WANTED_LEVEL_THRESHOLD(int wantedLevel) // FDD179EAF45B556C D9783F6B
+Остаток от GTA 4. В GTA 5 ничего не делает.
+
+void SET_PLAYER_WANTED_LEVEL(Player player, int wantedLevel, BOOL disableNoMission) // 39FF19C64EF7DA5B B7A0914B
+Устанавливает игроку определенный уровень розыска. Данной функцией можно установить 6 звезд розыска, но шестая звезда не даст никакого эффекта, так как она не используется игрой. Значение disableNoMission отключает розыск, когда игрок находится на миссии. Из-за особенностей игры уровень розыска устанавливается не сразу. Чтобы установить звезды немедленно, используется фунция SET_PLAYER_WANTED_LEVEL_NOW.
+
+void SET_PLAYER_WANTED_LEVEL_NO_DROP(Player player, int wantedLevel, BOOL p2) // 340E61DE7F471565 ED6F44F5
+Данная функция не до конца изучена. В игровых скриптах Rockstar значение p2 всегда равно false.
+
+void SET_PLAYER_WANTED_LEVEL_NOW(Player player, BOOL p1) // E0A7D1E497FFCD6F AF3AFD83
+Всегда используется в связке с SET_PLAYER_WANTED_LEVEL, чтобы уровень розыска был установлен игрой мгновенно. Параметр p1 неизвестен, в скриптах Rockstar значение всегда равно false.
+
+BOOL ARE_PLAYER_FLASHING_STARS_ABOUT_TO_DROP(Player player) // AFAF86043E5874E9 E13A71C7
+???
+
+BOOL ARE_PLAYER_STARS_GREYED_OUT(Player player) // 0A6EB355EE14A2DB 5E72AB72
+???
+
+void SET_DISPATCH_COPS_FOR_PLAYER(Player player, BOOL toggle)
+???
+
+BOOL IS_PLAYER_WANTED_LEVEL_GREATER(Player player, int wantedLevel) // 238DB2A2C23EE9EF 589A2661
+Возвращает true, если игрок набрал звезд больше, чем значение wantedLevel
+
+void CLEAR_PLAYER_WANTED_LEVEL(Player player) // B302540597885499 54EA5BCC
+Снимает все звезды с игрока. Из-за особенностей игры звезды снимаются не сразу. 
+
+BOOL IS_PLAYER_DEAD(Player player) // 424D4687FA1E5652 140CA5A8
+Возвращает true, если игрок погиб.
+
+BOOL IS_PLAYER_PRESSING_HORN(Player player) // FA1E2BF8B10598F9 ED1D1662
+Возвращает true, если игрок использует гудок в машине.
+
+void SET_PLAYER_CONTROL(Player player, BOOL toggle, int flags) // 8D32347D6D4C40A2 D17AFCD8
+Данная функция используется для некоторых моделей скинов, чтобы камера игры работала правильно. Примечание для ID моделей, кому нужна эта функция: 
+Флаги(0, 4, 16, 24, 32, 56, 60, 64, 128, 134, 512, 640, 1024, 2048, 2560)
+- Отключение вращения камеры.
+Флаги(256, 260, 384, 768, 896, 900, 952, 1280)
+
+int GET_PLAYER_WANTED_LEVEL(Player player) // E28E54788CE8F12D BDCDD163
+Возвращает количество звезд у игрока.
+
+void SET_MAX_WANTED_LEVEL(int maxWantedLevel) // AA5F02DB48D704B9 665A06F5
+Устанавливает максимальное количество звезд, которые может получить игрок в процессе игры.
+
+void SET_POLICE_RADAR_BLIPS(Any toggle) // 43286D561B72B8BF 8E114B10
+Значение false скроет метки полицейских на мини-карте. Значение true вернет их на мини-карту.
+
+void SET_POLICE_IGNORE_PLAYER(Player player, BOOL toggle) // 32C62AA929C2DA6A E6DE71B7
+Полиция будет игнорировать игрока, если установить значение true.
+
+BOOL IS_PLAYER_PLAYING(Player player) // 5E9564D8246B909A E15D777F
+Возвращает true, если игрок имеет статус PED, не мёртв, не получает урона и не арестован.
+
+void SET_EVERYONE_IGNORE_PLAYER(Player player, BOOL toggle) // 8EEDA153AD141BA4 C915285E
+Все NPC в игре не обращают игнорируют игрока: не вступают с ним в драки и т.д
+
+void SET_ALL_RANDOM_PEDS_FLEE(Player player, BOOL toggle) // 056E0FE8534C2949 49EAE968
+Рандомные NPC начинают в панике разбегаться.
+
+void SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME(Player player) // 471D2FF42A94B4F2 BF974891
+Тоже самое, что и SET_ALL_RANDOM_PEDS_FLEE
+
+void _0xDE45D1A1EF45EE61(Player player, BOOL toggle) // DE45D1A1EF45EE61 274631FE
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0xC3376F42B1FACCC6(Player player) // C3376F42B1FACCC6 02DF7AF4
+Используется в связке с SET_ALL_RANDOM_PEDS_FLEE_THIS_FRAME. Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void SET_IGNORE_LOW_PRIORITY_SHOCKING_EVENTS(Player player, BOOL toggle) // 596976B02B6B5700 A3D675ED
+Случайные события, не влияющие на прохождение игры на 100%, будут игнорироваться, если установить значение true.
+
+void SET_WANTED_LEVEL_MULTIPLIER(float multiplier) // 020E5F00CDA207BA 1359292F
+???
+
+void SET_WANTED_LEVEL_DIFFICULTY(Player player, float difficulty) // 9B0BB33B04405E7A B552626C
+???
+
+void RESET_WANTED_LEVEL_DIFFICULTY(Player player) // B9D0DD990DC141DD A64C378D
+???
+
+void START_FIRING_AMNESTY(int duration) // BF9BD71691857E48 5F8A22A6
+???
