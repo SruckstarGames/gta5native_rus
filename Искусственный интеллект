@@ -1,0 +1,62 @@
+void ADD_SCRIPT_TO_RANDOM_PED(char *name, Hash model, float p2, float p3) // 4EE5367468A65CCC ECC76C3D
+Функция устанавливает скриптовое поведение для определенного NPC. Используется в одиночном режиме, не работает в GTA Online.
+BRAIN::ADD_SCRIPT_TO_RANDOM_PED("pb_prostitute", ${s_f_y_hooker_01}, 100, 0);
+
+void REGISTER_OBJECT_SCRIPT_BRAIN(char *scriptName, Hash objectName, int p2, float p3, int p4, int p5) // 0BE84C318BA6EC22 B6BCC608
+Функция загружает в игру скриптовый сценарий для определенного объекта. 
+BRAIN::REGISTER_OBJECT_SCRIPT_BRAIN("ob_telescope", ${prop_telescope_01}, 100, 4.0, -1, 9);
+
+BOOL IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(Object object) // CCBA154209823057 BA4CAA56
+Вернет true, если REGISTER_OBJECT_SCRIPT_BRAIN для объекта сработал успешно.
+
+void REGISTER_WORLD_POINT_SCRIPT_BRAIN(Any *p0, float p1, Any p2) // 3CDC7136613284BD 725D91F7
+Функция загружает контрольные точки в миссии.
+
+BOOL IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE() // C5042CC6F5E3D450 2CF305A0
+Вернет true, если REGISTER_WORLD_POINT_SCRIPT_BRAIN успешно сработала.
+
+void ENABLE_SCRIPT_BRAIN_SET(int brainSet) // 67AA4D73F0CFA86B 2765919F
+Функция изучена не до конца.
+
+void DISABLE_SCRIPT_BRAIN_SET(int brainSet) // 14D8518E9760F08F FBD13FAD
+Функция изучена не до конца.
+
+void _0x0B40ED49D7D6FF84() // 0B40ED49D7D6FF84 19B27825
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+void _0x4D953DF78EBF8158() // 4D953DF78EBF8158 F3A3AB08
+Функция изучена не до конца. Чаще всего используется после функции NETWORK_END_TUTORIAL_SESSION() или перед TERMINATE_THIS_THREAD().
+
+void _0x6D6840CEE8845831(char *action) // 6D6840CEE8845831 949FE53E
+Функция запускает определенные скриптовые сценарии игры. Полный список сценариев доступен ниже.
+act_cinema
+am_mp_carwash_launch
+am_mp_carwash_control
+am_mp_property_ext
+chop
+fairgroundHub
+launcher_BasejumpHeli
+launcher_BasejumpPack
+launcher_CarWash
+launcher_golf
+launcher_Hunting_Ambient
+launcher_MrsPhilips
+launcher_OffroadRacing
+launcher_pilotschool
+launcher_Racing
+launcher_rampage
+launcher_rampage
+launcher_range
+launcher_stunts
+launcher_stunts
+launcher_tennis
+launcher_Tonya
+launcher_Triathlon
+launcher_Yoga
+ob_mp_bed_low
+ob_mp_bed_med
+
+void _0x6E91B04E08773030(char *action) // 6E91B04E08773030 29CE8BAA
+Тоже самое, что и _0x6D6840CEE8845831. Использует следующие скриптовые сценарии:
+"ob_tv"
+"launcher_Darts"
