@@ -1,0 +1,81 @@
+void CREATE_MOBILE_PHONE(int p3) // A4E8E696C532FBC7 5BBC5E23
+Создает мобильный телефон.
+0 - Стандартный телефон / Телефон Майкла
+1 - Телефон Тревора
+2 - Телефон Франклина
+4 - Телефон из пролога
+
+void DESTROY_MOBILE_PHONE() // 3BC861DF703E5097 1A65037B
+Выключает мобильный телефон.
+
+void SET_MOBILE_PHONE_SCALE(float scale) // CBDD322A73D6D932 09BCF1BE
+Установить масштаб телефона. Для корректной работы функцию необходимо использовать в цикле. Минимальное (дефолтное) значение - 500.0f.
+
+void SET_MOBILE_PHONE_ROTATION(float rotX, float rotY, float rotZ, Any p3) // BB779C0CA917E865 209C28CF
+Установить угол поворота для телефона. Последний параметр неизвестен и всегда должен быть равен 0.
+
+void GET_MOBILE_PHONE_ROTATION(Vector3 *rotation, Vehicle p1) // 1CEFB61F193070AE 17A29F23
+Получить текущий угол поворота телефона.
+
+void SET_MOBILE_PHONE_POSITION(float posX, float posY, float posZ) // 693A5C6D6734085B 841800B3
+Установить позицию для телефона.
+
+void GET_MOBILE_PHONE_POSITION(Vector3 *position) // 584FDFDA48805B86 B2E1E1A0
+Получить позицию телефона.
+
+void SCRIPT_IS_MOVING_MOBILE_PHONE_OFFSCREEN(BOOL toggle) // F511F759238A5122 29828690
+true - скрыть телефон с экрана. false - показать телефон на экране.
+
+BOOL CAN_PHONE_BE_SEEN_ON_SCREEN() // C4E2813898C97A4B 5F978584
+Функция должна возвращать true, если телефон виден на экране, но она работает в игре неправильно и возвращает true всегда, даже если телефон на экране не виден.
+
+void _MOVE_FINGER(int direction) // 95C9E72F3D7DEC9B
+Перемещает палец игрока по экрану телефона, когда включен вид от первого лица. Значения от 1 до 5.
+
+void _SET_PHONE_LEAN(BOOL Toggle) // 44E44169EF70138E
+Функция наклоняет телефон в горизонтальное положение, если установить значение true.
+
+void CELL_CAM_ACTIVATE(BOOL p0, BOOL p1) // FDE8F069C542D126 234C1AE9
+Функция активирует камеру на телефоне.
+
+void _DISABLE_PHONE_THIS_FRAME(BOOL toggle) // 015C49A93E3E086E 4479B304
+Функция отключает возможность включить телефон.
+
+void _0xA2CCBE62CD4C91A4(int *toggle) // A2CCBE62CD4C91A4 C273BB4D
+Использование этой функции изучено не до конца.
+
+void _0x1B0B4AEED5B9B41C(float p0) // 1B0B4AEED5B9B41C
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0x53F4892D18EC90A4(float p0) // 53F4892D18EC90A4
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0x3117D84EFA60F77B(float p0) // 3117D84EFA60F77B
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0x15E69E2802C24B8D(float p0) // 15E69E2802C24B8D
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0xAC2890471901861C(float p0) // AC2890471901861C
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0xD6ADE981781FCA09(float p0) // D6ADE981781FCA09
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0xF1E22DC13F5EEBAD(float p0) // F1E22DC13F5EEBAD
+Неизвестная функция. Присутствует только в Next-gen версии игры.
+
+void _0x466DA42C89865553(float p0) // 466DA42C89865553 66DCD9D2
+Неизвестная функция. Возможно, она ничего не делает в игре.
+
+BOOL CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK(Entity entity) // 439E9BC95B7E7FBE BEA88097
+Скорее всего, эта функция ничего не делает в игре.
+
+void GET_MOBILE_PHONE_RENDER_ID(int *renderId) // B4A53E05F68B6FA1 88E4FECE
+Получает текущий ID телефона.
+
+BOOL _NETWORK_SHOP_DOES_ITEM_EXIST(char *name) // BD4D7EAF8A30F637
+Неизвестная функция из GTA Online.
+
+BOOL _NETWORK_SHOP_DOES_ITEM_EXIST_HASH(Hash hash) // 247F0F73A182EA0B
+Неизвестная функция из GTA Online.
